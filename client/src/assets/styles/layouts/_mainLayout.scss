@@ -1,0 +1,65 @@
+@use "../custom/customBootstrap";
+
+.screen {
+  &--laptop {
+    @extend .d-none, .d-lg-block;
+  }
+  &--tablet {
+    @extend .d-none, .d-md-block;
+  }
+  &--mobile {
+    @extend .d-block, .d-md-none;
+  }
+}
+
+.MainLayout {
+  &__Root {
+    min-width: 375px;
+    height: 100vh;
+  }
+  &__Header {
+    @extend .navbar, .bg-primary;
+    .Header {
+      &__Container {
+        flex: 1;
+        @extend .d-flex,
+          .px-3,
+          .flex-row,
+          .justify-content-between,
+          .align-items-center;
+      }
+      &__Menu {
+        @extend .text-white, .screen--mobile;
+      }
+      &__Logo {
+        font-size: large;
+        @extend .text-white;
+      }
+      &__Account {
+        @extend .text-white, .d-flex, .flex-row, .align-items-center, .gap-1;
+        .Account {
+          &__Name {
+            @extend .screen--tablet;
+          }
+        }
+      }
+    }
+  }
+
+  &__View {
+    height: 100vh;
+    display: flex;
+
+    .ant-menu {
+      height: 100vh;
+    }
+  }
+}
+
+.Sidebar {
+  @extend .screen--tablet;
+}
+
+.Content {
+  @extend .container, .mt-2;
+}

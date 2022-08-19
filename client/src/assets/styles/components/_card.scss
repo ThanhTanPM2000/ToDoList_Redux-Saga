@@ -1,0 +1,7 @@
+@use "../custom/customBootstrap";
+
+.Card {
+  @extend .card;
+  box-shadow: -4px 9px 50px gray;
+  border-radius: 20px;
+}

@@ -1,0 +1,34 @@
+@use "../custom/customBootstrap";
+
+.center {
+  @extend .d-flex, .flex-column, .justify-content-center, .align-items-center;
+}
+
+.Register {
+  &__Container {
+    height: 100vh;
+    @extend .center;
+  }
+
+  .Card {
+    width: clamp(300px, 100% - 15vw, 700px);
+    @extend .card, .p-5;
+    &__Header {
+      @extend .center;
+    }
+
+    &__Title {
+    }
+    &__SubTitle {
+    }
+
+    &__Body {
+    }
+  }
+
+  .Form {
+    &__Nav {
+      // @extend .mt-2, .d-flex, .justify-content-center, .align-items-center;
+    }
+  }
+}

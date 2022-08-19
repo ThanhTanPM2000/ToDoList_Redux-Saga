@@ -1,0 +1,6 @@
+@use "../custom/customBootstrap";
+
+.Loading {
+  height: 100vh;
+  @extend .d-flex, .justify-content-center, .align-items-center;
+}
