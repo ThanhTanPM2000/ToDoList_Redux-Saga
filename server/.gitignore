@@ -1,5 +1,5 @@
 dist
-.env
+# .env
 
 # npm
 node_modules
